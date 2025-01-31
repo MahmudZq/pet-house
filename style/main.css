@@ -1,0 +1,50 @@
+
+.font-sora{
+    font-family: "Sora", serif;
+}
+.font-adlam{
+    font-family: "ADLaM Display", serif;
+}
+/* annimation style  */
+@keyframes grayscaleCycle {
+0% {
+  filter: grayscale(0%);
+}
+50% {
+  filter: grayscale(35%);
+}
+100% {
+  filter: grayscale(100%);
+}
+}
+
+.grayscale-animation {
+animation: grayscaleCycle 3s infinite;
+transition: filter 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.grayscale-animation:hover {
+filter: grayscale(0%); /* Return to full color when hovered */
+animation: none; /* Stop animation on hover */
+}
+@keyframes text-color-animate {
+0%   {color:#111111; padding-left: 0px;}
+25%  {color:red; padding-left: 20px;}
+50%  {color:blue; padding-left: 0px;}
+75%  {color:green; padding-left: 20px;}
+100% {color:#111111; padding-left: 0px;}
+}
+.text-color-animation {
+animation: text-color-animate 3s infinite;
+}
+
+@media screen and (max-width: 768px){
+@keyframes text-color-animate {
+0%    {color:#111111; padding-left: 4px;}
+25%  {color:red; padding-left: 24px;}
+50%  {color:blue; padding-left: 4px;}
+75%  {color:green; padding-left: 24px;}
+100% {color:#111111; padding-left: 4px;}
+}
+}
+
